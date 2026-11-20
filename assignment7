@@ -1,0 +1,31 @@
+// Experiment 7: Constructor Functions and Classes
+
+// Constructor Function
+function Student(name, course) {
+    this.name = name;
+    this.course = course;
+
+    this.display = function() {
+        return this.name + " studies " + this.course;
+    };
+}
+
+let student1 = new Student("Khushi", "Computer Science");
+
+console.log(student1.display());
+
+// Class
+class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    calculateArea() {
+        return this.length * this.width;
+    }
+}
+
+let rect = new Rectangle(8, 5);
+
+console.log("Area of Rectangle:", rect.calculateArea());

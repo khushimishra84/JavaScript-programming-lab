@@ -1,0 +1,62 @@
+// Experiment 15: Promises and Async/Await
+
+let students = [
+    {
+        id: 1,
+        name: "Khushi",
+        course: "B.Tech CSE"
+    },
+    {
+        id: 2,
+        name: "Aman",
+        course: "B.Sc Chemistry"
+    },
+    {
+        id: 3,
+        name: "Ishika",
+        course: "B.Tech CSE"
+    }
+];
+
+// Creating a Promise
+function getStudents() {
+
+    return new Promise(function(resolve, reject) {
+
+        setTimeout(function() {
+
+            if (students.length > 0) {
+                resolve(students);
+            } else {
+                reject("No Student Data Found");
+            }
+
+        }, 1000);
+    });
+}
+
+// Using Promise
+getStudents()
+    .then(function(data) {
+        console.log("Student Data:");
+        console.log(data);
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
+    });
+
+// Using Async/Await
+async function displayStudents() {
+
+    try {
+        let data = await getStudents();
+
+        console.log("Using Async/Await:");
+        console.log(data);
+
+    } catch(error) {
+        console.log("Error:", error);
+    }
+}
+
+displayStudents();

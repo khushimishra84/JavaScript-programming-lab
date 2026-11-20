@@ -1,0 +1,36 @@
+// Experiment 10: Objects and Destructuring
+
+let student = {
+    name: "Khushi",
+    rollNumber: 101,
+    course: "B.Tech CSE",
+    marks: {
+        JavaScript: 85,
+        Mathematics: 80
+    }
+};
+
+console.log("Student Object:", student);
+
+// Access Object Properties
+console.log("Name:", student.name);
+console.log("Course:", student.course);
+
+// Object Destructuring
+let { name, course, marks } = student;
+
+console.log("Destructured Name:", name);
+console.log("Destructured Course:", course);
+
+// Nested Destructuring
+let { JavaScript } = marks;
+
+console.log("JavaScript Marks:", JavaScript);
+
+// Array Destructuring
+let colors = ["Red", "Green", "Blue"];
+
+let [first, second] = colors;
+
+console.log("First Color:", first);
+console.log("Second Color:", second);

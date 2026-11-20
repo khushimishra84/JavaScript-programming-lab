@@ -1,0 +1,27 @@
+// Experiment 2: Operators and Type Conversion
+
+let a = 20;
+let b = 6;
+
+console.log("Addition:", a + b);
+console.log("Subtraction:", a - b);
+console.log("Multiplication:", a * b);
+console.log("Division:", a / b);
+console.log("Remainder:", a % b);
+
+// Type Conversion
+let num = "25";
+let convertedNum = Number(num);
+
+console.log("Original value:", num);
+console.log("Converted value:", convertedNum);
+console.log("Data type:", typeof convertedNum);
+
+// Simple Calculator
+let x = 12;
+let y = 4;
+
+console.log("Calculator Addition:", x + y);
+console.log("Calculator Subtraction:", x - y);
+console.log("Calculator Multiplication:", x * y);
+console.log("Calculator Division:", x / y);

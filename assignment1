@@ -1,0 +1,8 @@
+// Experiment 1: Your First JavaScript Script
+
+const studentName = "Khushi";
+const subject = "JavaScript Programming";
+
+console.log("Hello, World!");
+console.log("My name is " + studentName);
+console.log("I am learning " + subject);

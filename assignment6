@@ -1,0 +1,21 @@
+// Experiment 6: JSON Text
+
+let student = {
+    name: "Khushi",
+    rollNumber: 101,
+    course: "B.Tech CSE",
+    semester: 3
+};
+
+// Convert Object into JSON
+let jsonData = JSON.stringify(student);
+
+console.log("JSON Data:");
+console.log(jsonData);
+
+// Convert JSON into Object
+let newStudent = JSON.parse(jsonData);
+
+console.log("Student Name:", newStudent.name);
+console.log("Course:", newStudent.course);
+console.log("Semester:", newStudent.semester);

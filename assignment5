@@ -1,0 +1,39 @@
+// Experiment 5: Arrays and Array Methods
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log("Original Array:", fruits);
+
+// Push Method
+fruits.push("Orange");
+console.log("After Push:", fruits);
+
+// Pop Method
+fruits.pop();
+console.log("After Pop:", fruits);
+
+// Map Method
+let upperFruits = fruits.map(
+    fruit => fruit.toUpperCase()
+);
+
+console.log("Uppercase Fruits:", upperFruits);
+
+// Filter Method
+let marks = [45, 82, 67, 91, 58];
+
+let passed = marks.filter(
+    mark => mark >= 60
+);
+
+console.log("Passed Marks:", passed);
+
+// Nested Array
+let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log("Nested Array:", numbers);
+console.log("Middle Element:", numbers[1][1]);

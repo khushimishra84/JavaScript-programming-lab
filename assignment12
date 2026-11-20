@@ -1,0 +1,33 @@
+// Experiment 12: Callbacks and Higher-Order Functions
+
+function greet(name, callback) {
+
+    console.log("Hello " + name);
+
+    callback();
+}
+
+function message() {
+    console.log("Welcome to JavaScript Programming");
+}
+
+greet("Khushi", message);
+
+// Higher Order Function
+function calculate(a, b, operation) {
+    return operation(a, b);
+}
+
+function addition(x, y) {
+    return x + y;
+}
+
+function subtraction(x, y) {
+    return x - y;
+}
+
+console.log("Addition:",
+    calculate(12, 8, addition));
+
+console.log("Subtraction:",
+    calculate(12, 8, subtraction));

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Quiz</title>
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+    <form id="myForm">
+        <input type="text" id="name"
+        placeholder="Enter your name">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Local Storage</h2>
+
+    <button onclick="saveName()">Save Name</button>
+    <button onclick="showName()">Show Name</button>
+
+    <p id="storage"></p>
+
+    <h2>JavaScript Quiz</h2>
+
+    <p>Which language is used for web development?</p>
+
+    <button onclick="checkAnswer('wrong')">C++</button>
+    <button onclick="checkAnswer('correct')">JavaScript</button>
+    <button onclick="checkAnswer('wrong')">Python</button>
+
+    <p id="result"></p>
+
+    <script src="assignment9"></script>
+
+</body>
+</html>

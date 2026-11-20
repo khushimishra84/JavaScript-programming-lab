@@ -1,0 +1,32 @@
+// Experiment 13: Reduce, Some, Every and Map
+
+let numbers = [2, 4, 6, 8, 10];
+
+// Map Method
+let doubled = numbers.map(function(num) {
+    return num * 2;
+});
+
+console.log("Original Array:", numbers);
+console.log("Doubled Array:", doubled);
+
+// Reduce Method
+let sum = numbers.reduce(function(total, num) {
+    return total + num;
+}, 0);
+
+console.log("Sum:", sum);
+
+// Some Method
+let someResult = numbers.some(function(num) {
+    return num > 8;
+});
+
+console.log("Some numbers greater than 8:", someResult);
+
+// Every Method
+let everyResult = numbers.every(function(num) {
+    return num % 2 === 0;
+});
+
+console.log("All numbers are even:", everyResult);

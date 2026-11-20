@@ -1,0 +1,53 @@
+// Experiment 9: DOM, Validation, Storage and Quiz
+
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    if (name.trim() === "") {
+        document.getElementById("message").innerText =
+            "Please enter your name";
+    } else {
+        document.getElementById("message").innerText =
+            "Welcome " + name;
+    }
+});
+
+// Save Name
+function saveName() {
+    let name = document.getElementById("name").value;
+
+    if (name.trim() === "") {
+        document.getElementById("storage").innerText =
+            "Enter your name first";
+        return;
+    }
+
+    localStorage.setItem("studentName", name);
+
+    document.getElementById("storage").innerText =
+        "Name Saved Successfully";
+}
+
+// Show Name
+function showName() {
+    let savedName = localStorage.getItem("studentName");
+
+    document.getElementById("storage").innerText =
+        savedName ? "Saved Name: " + savedName :
+        "No name saved";
+}
+
+// Quiz
+function checkAnswer(answer) {
+    if (answer === "correct") {
+        document.getElementById("result").innerText =
+            "Correct Answer!";
+    } else {
+        document.getElementById("result").innerText =
+            "Wrong Answer! Try Again.";
+    }
+}

@@ -1,0 +1,64 @@
+// Name: Khushi Mishra
+// Experiment 8: Inheritance, Methods and Composition
+
+// Parent class
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    introduce(): void {
+        console.log("My name is " + this.name);
+        console.log("My age is " + this.age);
+    }
+}
+
+// Child class inheriting Person
+class Student extends Person {
+    course: string;
+
+    constructor(name: string, age: number, course: string) {
+        super(name, age);
+        this.course = course;
+    }
+
+    display(): void {
+        this.introduce();
+        console.log("My course is " + this.course);
+    }
+}
+
+// Composition: Engine class
+class Engine {
+    start(): void {
+        console.log("Engine started");
+    }
+}
+
+// Car class uses Engine
+class Car {
+    engine: Engine;
+
+    constructor() {
+        this.engine = new Engine();
+    }
+
+    startCar(): void {
+        this.engine.start();
+        console.log("Car is ready to drive");
+    }
+}
+
+// Creating objects
+const student1 = new Student("Khushi", 20, "B.Tech CSE");
+
+console.log("Student Details:");
+student1.display();
+
+console.log("\nCar Details:");
+const car1 = new Car();
+car1.startCar();
